@@ -31,6 +31,12 @@
   --h3: 800 1.25rem/120% var( --ff-sans);
   --subtitle: 500 0.875rem/100% var( --ff-sans);
   --body: 400 1rem/160% var( --ff-sans);
+
+  --py-base: 1rem;
+  --py-lg: 1.5rem;
+  --py-xl: 3rem;
+
+  --px-lg: 1.5rem;
 }
 
 @media (width >= 80em) {
@@ -41,6 +47,12 @@
     --h3: 800 2rem/120% var( --ff-sans);
     --subtitle: 500 0.875rem/100% var( --ff-sans);
     --body: 400 1rem/160% var( --ff-sans);
+
+    --py-base: 1.5rem;
+    --py-lg: 2.5rem;
+    --py-xl: 5rem;
+
+    --px-lg: 2rem;
   }
 }
 
