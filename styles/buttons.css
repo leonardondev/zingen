@@ -1,0 +1,66 @@
+.btn {
+  --btn-bg-color: var(--text-color-primary);
+  --btn-color: var(--background-color);
+
+  border: 0;
+  background-color: transparent;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 0.5rem;
+  font: var(--subtitle);
+  font-size: 1rem;
+  cursor: pointer;
+
+  /* primary */
+  background: var(--btn-bg-color);
+  color: var(--btn-color);
+}
+
+/* primary hover */
+.btn:hover {
+  --btn-color: var(--surface-color);
+  --btn-bg-color: linear-gradient(
+    90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
+  );
+}
+
+/* secondary default / hover */
+.btn[aria-label] {
+  position: relative;
+  &::before { /* fundo escuro*/
+    content: "";
+    position: absolute;
+    inset: 1.5px;
+    z-index: 1;
+    border-radius: calc(0.5rem - 1.5px);
+    background-color: var(--background-color);
+  }
+  &::after { /* testo com gradiente */
+    content: attr(aria-label);
+    position: relative;
+    z-index: 2;
+    color: transparent;
+    background: var(--btn-bg-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-md {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
