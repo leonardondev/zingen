@@ -81,10 +81,10 @@ span {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-color-secondary);
 }
 
-a:hover { /* testo com gradiente */
+a:hover { /* texto com gradiente */
   color: transparent;
   background: linear-gradient(
     90deg,

@@ -11,6 +11,7 @@
   border-radius: 0.5rem;
   font: var(--subtitle);
   font-size: 1rem;
+  line-height: 1.5rem;
   cursor: pointer;
 
   /* primary */
@@ -20,12 +21,18 @@
 
 /* primary hover */
 .btn:hover {
+  background-clip: initial;
+  -webkit-background-clip: initial;
+
   --btn-color: var(--surface-color);
   --btn-bg-color: linear-gradient(
     90deg,
     var(--brand-color-secondary) 0%,
     var(--brand-color-primary) 100%
   );
+
+  background: var(--btn-bg-color);
+  color: var(--btn-color);
 }
 
 /* secondary default / hover */
@@ -50,17 +57,34 @@
   }
 }
 
-.btn-sm {
+.btn-sm { /* header */
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
 }
 
-.btn-md {
+.btn-md { /* hero */
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
 }
 
-.btn-lg {
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
+.btn-lg { /* plans */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+@media (width >= 80em) {
+  .btn-sm { /* header */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .btn-md { /* hero */
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .btn-lg { /* plans */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
 }
