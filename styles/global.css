@@ -56,6 +56,10 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font: var(--body);
   color: var(--text-color-primary);
