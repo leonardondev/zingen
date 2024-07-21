@@ -1,0 +1,127 @@
+#pricing {
+  --fs-pricing: 2rem;
+
+  & header {
+    text-align: center;
+  }
+
+  & .cards {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+
+  & .card:has(> small) {
+    & .separator {
+      margin-block: 1.5rem;
+    }
+  }
+
+  & .card p {
+    margin-top: 0.25rem;
+  }
+
+  & zin-pricing {
+    display: block;
+    padding-block: 1.5rem;
+    font: var(--h3);
+    font-size: var(--fs-pricing);
+  }
+
+  & zin-pricing small {
+    font: var(--body);
+    line-height: 125%;
+    color: var(--text-color-secondary);
+  }
+
+  & li {
+    color: var(--text-color-secondary);
+    background: url(../assets/icons/check.svg) no-repeat;
+    padding-left: 2rem
+  }
+
+  & ul + small {
+    display: block;
+    margin-top: 1.5rem;
+    color: var(--text-color-secondary);
+    font: 400 0.875rem/125% var( --ff-sans);
+  }
+
+  @media (width >=80em) {
+    --fs-pricing: 2.5rem;
+
+    & .card {
+      margin-block: 2.5rem;
+    }
+
+    & header {
+      max-width: 50rem;
+      margin-inline: auto;
+    }
+  }
+}
+
+#pricing {
+  & .premium {
+    position: relative;
+
+    padding: 2px;
+    &::before {
+      content: "";
+      background: linear-gradient(
+        90deg,
+        var(--brand-color-secondary) 0%,
+        var(--brand-color-primary) 50%,
+        var(--brand-color-primary) 100%
+      );
+      position: absolute;
+      inset: 0;
+      border-radius: 1.5rem;
+      z-index: -1;
+    }
+
+    & .card {
+      padding-top: calc(var(--py-lg) + 2.5rem);
+      
+      @media (width >=80em) {
+        margin-block: 0;
+        padding-bottom: calc(var(--py-lg) + 4rem);
+      }
+
+      & > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding: 0.75rem 2rem;
+        color: var(--background-color);
+        background: linear-gradient(
+          90deg,
+          var(--brand-color-secondary) 0%,
+          var(--brand-color-primary) 100%
+        );      
+        border-top-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        font: 600 12px/160% var(--ff-sans);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+    }
+
+  }
+}
+
+.separator {
+  height: 1px;
+  margin-block: 2rem;
+  background: radial-gradient(
+    var(--text-color-secondary),
+    var(--surface-color) 70%
+  );
+
+
+}
