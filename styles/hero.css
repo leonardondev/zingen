@@ -1,12 +1,13 @@
 #hero {
   text-align: center;
-
+  
+  position: relative;
   &::before {
     content: "";
     background: url(../assets/bg-hero-mobile.svg) no-repeat bottom/cover;
     position: absolute;
     z-index: -1;
-    inset: -3.5rem 0;
+    inset: -1px;
   }
   
   & img[src*="music"] {
@@ -40,10 +41,8 @@
 @media (width >=80em) {
   #hero {
     &::before {
-      display: none;
+      background: url(../assets/bg-hero-desktop.svg) no-repeat bottom/cover;
     }
-
-    background: url(../assets/bg-hero-desktop.svg) no-repeat bottom center/cover;
     padding-bottom: 15rem;
 
     & img[src*="music"] {

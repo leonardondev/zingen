@@ -62,9 +62,11 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font: var(--body);
   color: var(--text-color-primary);
   background-color: var(--background-color);
+  min-width: 24rem;
 }
 
 img {
